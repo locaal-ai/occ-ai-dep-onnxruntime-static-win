@@ -1,5 +1,3 @@
-python onnxruntime\tools\ci_build\build.py --cmake_generator "Visual Studio 17 2022" --build_dir build --config Release --parallel --skip_tests --skip_submodule_sync --use_dml
-
 if (Test-Path prefix) {
   Remove-Item prefix -Recurse -Force
 }
@@ -10,6 +8,8 @@ New-Item prefix\lib -ItemType Directory -Force
 if (Test-Path onnxruntime-static-win.zip) {
   Remove-Item onnxruntime-static-win.zip -Force
 }
+
+python onnxruntime\tools\ci_build\build.py --cmake_generator "Visual Studio 17 2022" --build_dir build --config Release --parallel --skip_tests --skip_submodule_sync --use_dml
 
 $binArray =
   "build\packages\Microsoft.AI.DirectML.1.10.1\bin\x64-win\DirectML.dll",
