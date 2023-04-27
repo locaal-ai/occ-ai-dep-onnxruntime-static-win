@@ -41,6 +41,8 @@ $libArray =
   "build\Release\Release\onnxruntime_graph.lib",
   "build\Release\Release\onnxruntime_mlas.lib",
   "build\Release\Release\onnxruntime_optimizer.lib",
+  "build\Release\Release\onnxruntime_providers_dml.lib",
+  "build\Release\Release\onnxruntime_providers_shared.lib",
   "build\Release\Release\onnxruntime_providers.lib",
   "build\Release\Release\onnxruntime_session.lib",
   "build\Release\Release\onnxruntime_util.lib"
