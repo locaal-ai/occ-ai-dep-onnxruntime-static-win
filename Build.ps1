@@ -49,3 +49,5 @@ foreach ($include in $includeArray) {
 foreach ($lib in $libArray) {
     Copy-Item $lib prefix\lib -Verbose
 }
+
+Compress-Archive prefix\* onnxruntime-static-win.zip -Verbose
