@@ -21,6 +21,7 @@ $includeArray =
   "onnxruntime\include\onnxruntime\core\providers\dml\dml_provider_factory.h",
   "onnxruntime\include\onnxruntime\core\session\onnxruntime_c_api.h",
   "onnxruntime\include\onnxruntime\core\session\onnxruntime_cxx_api.h",
+  "onnxruntime\include\onnxruntime\core\session\onnxruntime_cxx_inline.h",
   "onnxruntime\include\onnxruntime\core\session\onnxruntime_run_options_config_keys.h",
   "onnxruntime\include\onnxruntime\core\session\onnxruntime_session_options_config_keys.h"
 
