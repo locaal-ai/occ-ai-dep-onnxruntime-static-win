@@ -32,7 +32,6 @@ $libArray =
   "build\$Configuration\_deps\abseil_cpp-build\absl\hash\$Configuration\absl_low_level_hash.lib",
   "build\$Configuration\_deps\onnx-build\$Configuration\onnx_proto.lib",
   "build\$Configuration\_deps\onnx-build\$Configuration\onnx.lib",
-  "build\$Configuration\_deps\protobuf-build\$Configuration\libprotobuf-lite.lib",
   "build\$Configuration\_deps\re2-build\$Configuration\re2.lib",
   "build\$Configuration\$Configuration\onnxruntime_common.lib",
   "build\$Configuration\$Configuration\onnxruntime_flatbuffers.lib",
@@ -45,6 +44,12 @@ $libArray =
   "build\$Configuration\$Configuration\onnxruntime_providers.lib",
   "build\$Configuration\$Configuration\onnxruntime_session.lib",
   "build\$Configuration\$Configuration\onnxruntime_util.lib"
+
+if ($Configuration -eq "Debug") {
+  $libArray += "build\Debug\_deps\protobuf-build\Debug\libprotobuf-lited.lib"
+} else {
+  $libArray += "build\Release\_deps\protobuf-build\Release\libprotobuf-lite.lib"
+}
 
 foreach ($bin in $binArray) {
     Copy-Item $bin release\$Configuration\bin -Verbose
