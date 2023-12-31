@@ -1,4 +1,4 @@
-Param($Configuration)
+Param($Configuration, $Version)
 
 if (Test-Path release) {
   Remove-Item release -Recurse -Force
@@ -63,4 +63,4 @@ foreach ($lib in $libArray) {
     Copy-Item $lib release\$Configuration\lib -Verbose
 }
 
-Compress-Archive release\$Configuration\* release\onnxruntime-windows-$Configuration.zip -Verbose
+Compress-Archive release\$Configuration\* release\onnxruntime-windows-$Version-$Configuration.zip -Verbose
