@@ -37,7 +37,7 @@ jobs:
         uses: "actions/checkout@v4"
 
       - name: "Download the ONNX Runtime source code"
-        run: "git clone -b $ONNXRUNTIME_VERSION --recurse-submodules --depth 1 https://github.com/microsoft/onnxruntime.git"
+        run: "git clone -b ${{ env.ONNXRUNTIME_VERSION }} --recurse-submodules --depth 1 https://github.com/microsoft/onnxruntime.git"
 
       - name: "Run Build-Windows.ps1"
         run: "./Build-Windows.ps1 -Configuration ${{ matrix.config }} -Version ${{ steps.get-version.outputs.version }}"
