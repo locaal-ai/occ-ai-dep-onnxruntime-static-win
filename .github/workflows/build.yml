@@ -11,7 +11,7 @@ on:
       - "main"
 
 env:
-  ONNXRUNTIME_VERSION: "v1.17.1"
+  ONNXRUNTIME_VERSION: "v1.17.3"
 
 jobs:
   BuildWindows:
